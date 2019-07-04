@@ -22,7 +22,7 @@ for key,value in new_dict.iteritems():
 	if key not in old_dict:
 		filtered_dict[key] = value[0], (1 if value[1] == "TRUE" else 0), (1 if value[2] == "TRUE" else 0)
 
-with open('newfile.csv', 'wb') as f: 
+with open(output_file, 'wb') as f: 
     f.write("%s,%s,%s,%s\n"%("TacCode","MktModel","DeviceBandW850","DeviceBandW2100"))
     for key, value in filtered_dict.iteritems():
         f.write("%s,%s,%s,%s\n"%(key,value[0], value[1], value[2]))
