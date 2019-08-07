@@ -16,13 +16,16 @@ with open('old_file.csv', 'rU') as f:
 with open('new_file.csv', 'rU') as m:
   reader = csv.reader(m)
   for row in reader:
-    new_dict[row[0]] = row[1], row[2], row[3]
+    new_dict[row[0]] = row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8]
 
 for key,value in new_dict.iteritems():
   if key not in old_dict:
-    filtered_dict[key] = value[0], (1 if value[1] == "TRUE" else 0), (1 if value[2] == "TRUE" else 0)
+    try:
+      filtered_dict[key] = value[0], value[1], value[2], value[3], value[4], value[5], value[6], value[7], value[8]
+    except:
+      filtered_dict[key] = value[0], value[1], value[2], value[3], value[4], value[5], value[6], value[7], "FALSE"
 
 with open('output_file.csv', 'wb') as f: 
-    f.write("%s,%s,%s,%s\n"%("TacCode","MktModel","DeviceBandW850","DeviceBandW2100"))
+    f.write("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n"%("tac_code","model_family","w850_flag","w2100_flag", "lte700_flag", "lte1800_flag", "lte2600_flag", "lte2300_flag","utms_3g_capable","utms_4g_capable"))
     for key, value in filtered_dict.iteritems():
-        f.write("%s,%s,%s,%s\n"%(key,value[0], value[1], value[2]))
+        f.write("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n"%(key,value[0], value[1], value[2], value[3], value[4], value[5], value[6], value[7], value[8]))
