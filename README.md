@@ -3,11 +3,11 @@ An application which will take in two CSV files, filter through every row in bot
 
 ## Getting Started
 
-The application is built using Python 2.7. Download a version appropriate to your OS here: https://www.python.org/downloads/
+The application is built using Python 3.0. Download a version appropriate to your OS here: https://www.python.org/downloads/
 
 ### Prerequisites
 
-Python 2.7.
+Python 3.0.
 
 ## Background
 
