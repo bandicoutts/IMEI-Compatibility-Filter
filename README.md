@@ -1,8 +1,10 @@
 # IMEI-Compatibility-Filter
 
-**A Python script which does the work of a VLOOKUP in Excel. The script takes in two CSV files; these CSV files contain information about phone compatibility (i.e. what bands are available on a particular version of the phone). These files are used when you check on a provider's website to determine if you can use your phone on their network.**
+**A Python script which does the work of a VLOOKUP in Excel.**
 
-**The script filters through every row in both files, and will determine which rows are new in a given month. This information will then be output in a way that can be immediately uploaded to Skinny's phone compatibility checker.**
+_The script takes in two CSV files; these CSV files contain information about phone compatibility (i.e. what bands are available on a particular version of the phone). These files are used when you check on a provider's website to determine if you can use your phone on their network._
+
+_The script filters through every row in both files, and will determine which rows are new in a given month. This information will then be output in a way that can be immediately uploaded to Skinny's phone compatibility checker._
 
 ## Getting Started
 
