@@ -1,5 +1,8 @@
 # IMEI-Compatibility-Filter
-An application which will take in two CSV files, filter through every row in both files and remove duplicates, and return a CSV with the non-duplicated rows formatted in an acceptable way for the website which uses the file.
+
+**A Python script which does the work of a VLOOKUP in Excel. The script takes in two CSV files; these CSV files contain information about phone compatibility (i.e. what bands are available on a particular version of the phone). These files are used when you check on a provider's website to determine if you can use your phone on their network.**
+
+**The script filters through every row in both files, and will determine which rows are new in a given month. This information will then be output in a way that can be immediately uploaded to Skinny's phone compatibility checker.**
 
 ## Getting Started
 
@@ -11,15 +14,15 @@ Python 3.0.
 
 ## Background
 
-The intent of this application was to automate the process of filtering through CSV files to find non-duplicate rows and format them in a way I support understands. GSMa (https://www.gsma.com/services/gsma-imei/tac-allocation/) provide raw files with the information of every phone available, and the 3G/4G bands they support. 
+_The intent of this application was to automate the process of filtering through CSV files to find non-duplicate rows and format them in a way I support understands. GSMa (https://www.gsma.com/services/gsma-imei/tac-allocation/) provide raw files with the information of every phone available, and the 3G/4G bands they support._
 
-The mobile provider I work with have an IMEI Compatibility checker for their network which takes in a CSV file; this file needs to contain only the new phones (i.e. the "non-duplicated rows"), and requires headers and fields to be formatted very specifically.
+_The mobile provider I worked with had an IMEI Compatibility checker for their network which takes in a CSV file; this file needs to contain only the new phones (i.e. the "non-duplicated rows"), and requires headers and fields to be formatted very specifically._
 
-Previously, I used an Excel spreadsheet which would take roughly an hour to go through 170,000 rows and filter out the fields that were already online; this application can filter through the same amount of information in 1.25 seconds. The application does use three dictionaries to filter out the duplicated data, but given the data size of the CSV files being dealt with this wasn't causing any bottlenecks.
+_Previously, I used an Excel spreadsheet and compared fields using VLOOKUP. As I had a slow machine, this was a very slow process (it needed to go through 170,000 rows and filter out the fields that were already online). This application can filter through the same amount of information in 1.25 seconds, instead of multiple hours. The application does use three dictionaries to filter out the duplicated data, but given the data size of the CSV files being dealt with this wasn't causing any bottlenecks._
 
 ## Authors
 
-* **David Coutts** - *Initial work* - [bandicoutts](https://github.com/bandicoutts)
+- **David Coutts** - _Initial work_ - [bandicoutts](https://github.com/bandicoutts)
 
 ## License
 
