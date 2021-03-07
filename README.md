@@ -8,7 +8,7 @@ _The script filters through every row in both files, and will determine which ro
 
 ## Getting Started
 
-The application is built using Python 3.0. Download a version appropriate to your OS here: https://www.python.org/downloads/
+The application is built using Python 3.0. Download a version appropriate to your OS here: https://www.python.org/downloads/ 
 
 ### Prerequisites
 
